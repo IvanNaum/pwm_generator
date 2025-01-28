@@ -1,0 +1,69 @@
+
+**** 09/27/24 15:55:14 ******* PSpice 16.3.0 (June 2009) ****** ID# 0 ********
+
+ * C:\Documents and Settings\Admin\Desktop\semester_project\master_sch.sch
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+* Schematics Version 16.3.0
+* Fri Sep 27 15:54:55 2024
+
+
+
+** Analysis setup **
+.LOADBIAS ""
+------------$
+ERROR -- File name too long
+.OP 
+
+
+* From [PSPICE NETLIST] section of C:\Cadence\SPB_16.3\tools\PSpice\PSpice.ini:
+.lib "nom.lib"
+
+.INC "master_sch.net"
+
+
+
+**** INCLUDING master_sch.net ****
+* Schematics Netlist *
+
+
+
+Q_Q2         $N_0002 $N_0001 $N_0003 BC547A 
+Q_Q1         $N_0005 $N_0004 $N_0003 BC547A 
+Q_Q3         $N_0007 $N_0006 $N_0008 BC546A 
+Q_Q4         $N_0009 $N_0006 $N_0010 BC546A 
+Q_Q6         $N_0005 $N_0009 $N_0011 BC557A 
+X_R15         $N_0013 $N_0003 $N_0012 POT PARAMS: SET=0.5 VALUE=22K
+D_D1         $N_0003 0 D1N4154 
+R_R13         $N_0014 0  22k  
+R_R7         $N_0011 $N_0014  510  
+V_V1         $N_0011 0 12V
+R_R10         $N_0004 $N_0002  4.3k  
+X_R14         0 $N_0006 $N_0014 POT PARAMS: SET=0.5 VALUE=10K
+R_R16         0 $N_0002  10k  
+R_R17         0 $N_0005  10k  
+R_R9         0 $N_0004  2.2k  
+R_R8         $N_0012 $N_0010  1k  
+R_R3         $N_0013 $N_0008  1k  
+R_R1         0 $N_0001  2.2k  
+R_R2         $N_0001 $N_0005  4.3k  
+Q_Q5         $N_0002 $N_0007 $N_0011 BC557A 
+C_C4         $N_0007 $N_0005  0.1u  
+C_C3         $N_0009 $N_0002  0.1u  
+C_C2         $N_0004 $N_0002  0.01u  
+C_C1         $N_0001 $N_0005  0.01u  
+
+**** RESUMING master_sch.cir ****
+.PROBE V(*) I(*) W(*) D(*) NOISE(*) 
+
+
+.END
+

@@ -1,0 +1,5 @@
+ lib=C:\Cadence\SPB_16.3\tools\PSpice\Library\diode.lib, offset=19469, size=328
+ lib=C:\Cadence\SPB_16.3\tools\PSpice\Library\bipolar.lib, offset=254057, size=319
+ lib=C:\Cadence\SPB_16.3\tools\PSpice\Library\bipolar.lib, offset=201483, size=305
+ lib=C:\Cadence\SPB_16.3\tools\PSpice\Library\jbipolar.lib, offset=63572, size=344
+ lib=C:\Cadence\SPB_16.3\tools\PSpice\Library\breakout.lib, offset=9160, size=133

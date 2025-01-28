@@ -1,0 +1,315 @@
+
+**** 10/07/24 11:36:09 ******* PSpice 16.3.0 (June 2009) ****** ID# 0 ********
+
+ * C:\Documents and Settings\Admin\Desktop\semester_project\master_sch.sch
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+* Schematics Version 16.3.0
+* Mon Oct 07 11:36:09 2024
+
+
+
+** Analysis setup **
+.tran 0 0.4s 0 1m
+.OP 
+
+
+* From [PSPICE NETLIST] section of C:\Cadence\SPB_16.3\tools\PSpice\PSpice.ini:
+.lib "nom.lib"
+
+.INC "master_sch.net"
+
+
+
+**** INCLUDING master_sch.net ****
+* Schematics Netlist *
+
+
+
+V_V2         $N_0001 0 12V
+R_R19         $N_0002 0  2.2k  
+Q_Q13         $N_0003 $N_0002 $N_0004 Q2N5089
+D_D3         $N_0004 0 D1N4148 
+Q_Q14         $N_0006 $N_0005 $N_0004 Q2N5089
+R_R25         $N_0007 $N_0001  510  
+X_R27         $N_0009 $N_0004 $N_0008 POT PARAMS: SET=0.5 VALUE=22k
+R_R21         $N_0010 $N_0008  1k  
+R_R20         $N_0011 $N_0009  1k  
+Q_Q18         $N_0013 $N_0012 $N_0011 Q2SC1815
+Q_Q17         $N_0014 $N_0012 $N_0010 Q2SC1815
+C_C5         $N_0013 $N_0006  0.1u  
+R_R18         $N_0006 $N_0002  4.3k  
+C_C6         $N_0006 $N_0002  0.01u  
+R_R28         $N_0006 0  620  
+R_R23         $N_0003 $N_0005  4.3k  
+R_R29         $N_0003 0  620  
+C_C7         $N_0003 $N_0005  0.02u  
+X_R26         0 $N_0012 $N_0007 POT PARAMS: SET=0.5 VALUE=6.8k
+R_R22         $N_0005 0  2.3k  
+C_C8         $N_0014 $N_0003  0.2u  
+Q_Q23         $N_0003 $N_0013 $N_0001 Q2N3906
+Q_Q24         $N_0006 $N_0014 $N_0001 Q2N3906
+
+**** RESUMING master_sch.cir ****
+.PROBE V(*) I(*) W(*) D(*) NOISE(*) 
+
+
+.END
+
+**** 10/07/24 11:36:09 ******* PSpice 16.3.0 (June 2009) ****** ID# 0 ********
+
+ * C:\Documents and Settings\Admin\Desktop\semester_project\master_sch.sch
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               D1N4148         
+          IS    2.682000E-09 
+           N    1.836        
+         ISR    1.565000E-09 
+         IKF     .04417      
+          BV  100            
+         IBV  100.000000E-06 
+          RS     .5664       
+          TT   11.540000E-09 
+         CJO    4.000000E-12 
+          VJ     .5          
+           M     .3333       
+
+
+**** 10/07/24 11:36:09 ******* PSpice 16.3.0 (June 2009) ****** ID# 0 ********
+
+ * C:\Documents and Settings\Admin\Desktop\semester_project\master_sch.sch
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               Q2N5089         Q2N3906         Q2SC1815        
+               NPN             PNP             NPN             
+       LEVEL    1               1               1            
+          IS    5.911000E-15    1.410000E-15  639.500000E-18 
+          BF    1.434000E+03  180.7           149.9          
+          NF    1               1               1            
+         VAF   62.37           18.7           172.5          
+         IKF     .0154           .08             .8587       
+         ISE    5.911000E-15                  750.100000E-18 
+          NE    1.421                           1.47         
+          BR    1.262           4.977           6.575        
+          NR    1               1               1            
+         VAR                                  100            
+         IKR                                     .4534       
+         ISC                                    4.653000E-15 
+          NC                                    1.185        
+          NK                                     .5413       
+         ISS    0               0               0            
+          RB   10              10                            
+          RE    0               0               0            
+          RC    1.61            2.5              .7972       
+         CJE    4.973000E-12    8.063000E-12    5.000000E-12 
+         VJE     .75             .75             .75         
+         MJE     .4146           .3677           .3333       
+         CJC    4.017000E-12    9.728000E-12    4.858000E-12 
+         VJC     .75             .75             .75         
+         MJC     .3174           .5776           .3333       
+        XCJC    1               1               1            
+         CJS    0               0               0            
+         VJS     .75             .75             .75         
+          TF  822.300000E-12  179.300000E-12  314.300000E-12 
+         XTF    7               6                            
+         VTF    4               4              10            
+         ITF     .35             .4            13.01         
+          TR    4.671000E-09   33.420000E-09   10.000000E-09 
+         XTB    1.5             1.5             1.5          
+          KF    0               0               0            
+          AF    1               1               1            
+          CN    2.42            2.2             2.42         
+           D     .87             .52             .87         
+
+
+**** 10/07/24 11:36:09 ******* PSpice 16.3.0 (June 2009) ****** ID# 0 ********
+
+ * C:\Documents and Settings\Admin\Desktop\semester_project\master_sch.sch
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+($N_0001)   12.0000                   ($N_0002)    1.6907                       
+
+($N_0003)    5.3377                   ($N_0004)     .8921                       
+
+($N_0005)    1.6899                   ($N_0006)    5.4980                       
+
+($N_0007)   11.1620                   ($N_0008)    4.5444                       
+
+($N_0009)    4.5444                   ($N_0010)    4.8765                       
+
+($N_0011)    4.8765                   ($N_0012)    5.5733                       
+
+($N_0013)   11.1850                   ($N_0014)   11.1850                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V2        -1.059E-01
+
+    TOTAL POWER DISSIPATION   1.27E+00  WATTS
+
+
+**** 10/07/24 11:36:09 ******* PSpice 16.3.0 (June 2009) ****** ID# 0 ********
+
+ * C:\Documents and Settings\Admin\Desktop\semester_project\master_sch.sch
+
+
+ ****     OPERATING POINT INFORMATION      TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+
+
+**** DIODES
+
+
+NAME         D_D3      
+MODEL        D1N4148   
+ID           8.53E-02 
+VD           8.92E-01 
+REQ          8.10E-01 
+CAP          1.43E-08 
+
+
+**** BIPOLAR JUNCTION TRANSISTORS
+
+
+NAME         Q_Q13       Q_Q14       Q_Q18       Q_Q17       Q_Q23     
+MODEL        Q2N5089     Q2N5089     Q2SC1815    Q2SC1815    Q2N3906   
+IB           1.17E-04    1.14E-04    2.21E-06    2.21E-06   -3.30E-04 
+IC           4.25E-02    4.19E-02    3.30E-04    3.30E-04   -5.20E-02 
+VBE          7.99E-01    7.98E-01    6.97E-01    6.97E-01   -8.15E-01 
+VBC         -3.65E+00   -3.81E+00   -5.61E+00   -5.61E+00    5.85E+00 
+VCE          4.45E+00    4.61E+00    6.31E+00    6.31E+00   -6.66E+00 
+BETADC       3.64E+02    3.69E+02    1.49E+02    1.49E+02    1.58E+02 
+GM           9.53E-01    9.41E-01    1.27E-02    1.27E-02    1.51E+00 
+RPI          2.30E+02    2.37E+02    1.18E+04    1.18E+04    7.84E+01 
+RX           1.00E+01    1.00E+01    0.00E+00    0.00E+00    1.00E+01 
+RO           1.55E+03    1.58E+03    5.36E+05    5.36E+05    4.70E+02 
+CBE          1.67E-09    1.59E-09    1.21E-11    1.21E-11    3.19E-10 
+CBC          2.30E-12    2.28E-12    2.38E-12    2.38E-12    2.80E-12 
+CJS          0.00E+00    0.00E+00    0.00E+00    0.00E+00    0.00E+00 
+BETAAC       2.20E+02    2.23E+02    1.50E+02    1.50E+02    1.18E+02 
+CBX/CBX2     0.00E+00    0.00E+00    0.00E+00    0.00E+00    0.00E+00 
+FT/FT2       9.10E+07    9.41E+07    1.40E+08    1.40E+08    7.45E+08 
+
+
+
+NAME         Q_Q24     
+MODEL        Q2N3906   
+IB          -3.30E-04 
+IC          -5.16E-02 
+VBE         -8.15E-01 
+VBC          5.69E+00 
+VCE         -6.50E+00 
+BETADC       1.57E+02 
+GM           1.50E+00 
+RPI          7.84E+01 
+RX           1.00E+01 
+RO           4.70E+02 
+CBE          3.18E-10 
+CBC          2.84E-12 
+CJS          0.00E+00 
+BETAAC       1.17E+02 
+CBX/CBX2     0.00E+00 
+FT/FT2       7.43E+08 
+
+
+**** 10/07/24 11:36:09 ******* PSpice 16.3.0 (June 2009) ****** ID# 0 ********
+
+ * C:\Documents and Settings\Admin\Desktop\semester_project\master_sch.sch
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+($N_0001)   12.0000                   ($N_0002)    1.6907                       
+
+($N_0003)    5.3377                   ($N_0004)     .8921                       
+
+($N_0005)    1.6899                   ($N_0006)    5.4980                       
+
+($N_0007)   11.1620                   ($N_0008)    4.5444                       
+
+($N_0009)    4.5444                   ($N_0010)    4.8765                       
+
+($N_0011)    4.8765                   ($N_0012)    5.5733                       
+
+($N_0013)   11.1850                   ($N_0014)   11.1850                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V2        -1.059E-01
+
+    TOTAL POWER DISSIPATION   1.27E+00  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 10/07/24 11:36:09 ******* PSpice 16.3.0 (June 2009) ****** ID# 0 ********
+
+ * C:\Documents and Settings\Admin\Desktop\semester_project\master_sch.sch
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .05
+

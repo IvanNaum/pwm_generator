@@ -1,0 +1,22 @@
+* C:\Documents and Settings\Admin\Desktop\semester_project\master_sch.sch
+
+* Schematics Version 16.3.0
+* Mon Oct 07 11:36:09 2024
+
+
+
+** Analysis setup **
+.tran 0 0.4s 0 1m
+.OP 
+
+
+* From [PSPICE NETLIST] section of C:\Cadence\SPB_16.3\tools\PSpice\PSpice.ini:
+.lib "nom.lib"
+
+.INC "master_sch.net"
+
+
+.PROBE V(*) I(*) W(*) D(*) NOISE(*) 
+
+
+.END
